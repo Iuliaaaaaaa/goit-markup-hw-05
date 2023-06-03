@@ -71,7 +71,8 @@ img { display: block;
 
 .nav-line {
   position: relative;
-  color: var(--link);
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .nav-line::after {
@@ -584,4 +585,45 @@ border-radius: 2px;
       letter-spacing: 0.02em;
       color: var(--address-color);
     }
+    
+    .backdrop {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(46, 47, 66, 0.4);
+      top: 0;
+      left: 0;
+      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    } 
 
+    .modal {
+      position: absolute;
+      width: 408px;
+      min-height: 584px;
+      transform: translate scale(1);
+      transition:  transform 300ms linear;
+      top: 80px;
+      left: 516px;
+      background: #fcfcfc;
+      border-radius: 4px;
+      padding: 24px;
+    }
+      
+    .backdrop.is-hidden .modal{
+      transform: translate scale(0);
+      
+    }
+    .modal-close {
+      width: 24px;
+      height: 24pt;
+      border: 1px solid #999;
+      border-radius: 50%;
+      display: block;
+      margin-left: auto;
+    }
+
+    .is-hidden {
+      visibility: none;
+      opacity: 0;
+      pointer-events: none;
+    }
