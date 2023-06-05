@@ -115,8 +115,12 @@ border-radius: 2px;
         color: var(--link-list-color);
         padding: 24px 0;
         position: relative;
-        color: #404bbf;
         transition: color var(--transition);
+    }
+
+    .link-list-wbs {
+      color: #404bbf;
+      transition: color var(--transition);
     }
     .nav-item {
       color: #404bbf;  
