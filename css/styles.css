@@ -585,7 +585,6 @@ border-radius: 2px;
 
     .image-link:hover,
     .image-link:focus {
-      transform: translateY(0%);
       box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);;
     }
 
@@ -604,6 +603,37 @@ border-radius: 2px;
       color: var(--address-color);
     }
     
+
+
+
+    .img-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      overflow: auto;
+      transform: translate(0, 100%);
+      transition: transform var(--transition);
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: var(--button);
+      padding: 40px 32px;
+      background-color:  #4d5ae5;
+    }
+    
+    .image-link:hover .overlay,
+    .image-link:focus .overlay {
+      transform: translate(0, 0);
+    }
+    
+
     .backdrop {
       position: fixed;
       width: 100%;
